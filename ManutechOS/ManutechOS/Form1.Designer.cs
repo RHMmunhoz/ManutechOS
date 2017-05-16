@@ -30,27 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.tscContainer = new System.Windows.Forms.ToolStripContainer();
-            this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
-            this.miCadastros = new System.Windows.Forms.ToolStripMenuItem();
-            this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.rodStatus = new System.Windows.Forms.StatusStrip();
             this.mnuLateral = new System.Windows.Forms.ToolStrip();
             this.btnClientes = new System.Windows.Forms.ToolStripButton();
             this.btnEquipamentos = new System.Windows.Forms.ToolStripButton();
             this.btnServicos = new System.Windows.Forms.ToolStripButton();
             this.btnOS = new System.Windows.Forms.ToolStripButton();
+            this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
+            this.miCadastros = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.rodStatus = new System.Windows.Forms.StatusStrip();
+            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
+            this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
             this.tscContainer.SuspendLayout();
-            this.mnuPrincipal.SuspendLayout();
             this.mnuLateral.SuspendLayout();
+            this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // tscContainer
@@ -81,36 +84,13 @@
             // 
             this.tscContainer.TopToolStripPanel.Controls.Add(this.mnuPrincipal);
             // 
-            // mnuPrincipal
+            // rodStatus
             // 
-            this.mnuPrincipal.Dock = System.Windows.Forms.DockStyle.None;
-            this.mnuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miCadastros,
-            this.miConsultas,
-            this.miSobre});
-            this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.mnuPrincipal.Name = "mnuPrincipal";
-            this.mnuPrincipal.Size = new System.Drawing.Size(653, 24);
-            this.mnuPrincipal.TabIndex = 0;
-            this.mnuPrincipal.Text = "Menu Principal";
-            // 
-            // miCadastros
-            // 
-            this.miCadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.equipamentosToolStripMenuItem,
-            this.serviçosToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.usuáriosToolStripMenuItem});
-            this.miCadastros.Name = "miCadastros";
-            this.miCadastros.Size = new System.Drawing.Size(71, 20);
-            this.miCadastros.Text = "Cadastros";
-            // 
-            // miSobre
-            // 
-            this.miSobre.Name = "miSobre";
-            this.miSobre.Size = new System.Drawing.Size(49, 20);
-            this.miSobre.Text = "Sobre";
+            this.rodStatus.Dock = System.Windows.Forms.DockStyle.None;
+            this.rodStatus.Location = new System.Drawing.Point(0, 0);
+            this.rodStatus.Name = "rodStatus";
+            this.rodStatus.Size = new System.Drawing.Size(653, 22);
+            this.rodStatus.TabIndex = 0;
             // 
             // mnuLateral
             // 
@@ -167,29 +147,59 @@
             this.btnOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOS.ToolTipText = "O.S (F)";
             // 
+            // mnuPrincipal
+            // 
+            this.mnuPrincipal.Dock = System.Windows.Forms.DockStyle.None;
+            this.mnuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miCadastros,
+            this.miConsultas,
+            this.miSobre});
+            this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.mnuPrincipal.Name = "mnuPrincipal";
+            this.mnuPrincipal.Size = new System.Drawing.Size(653, 24);
+            this.mnuPrincipal.TabIndex = 0;
+            this.mnuPrincipal.Text = "Menu Principal";
+            // 
+            // miCadastros
+            // 
+            this.miCadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem,
+            this.equipamentosToolStripMenuItem,
+            this.serviçosToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.usuáriosToolStripMenuItem});
+            this.miCadastros.Name = "miCadastros";
+            this.miCadastros.Size = new System.Drawing.Size(71, 20);
+            this.miCadastros.Text = "Cadastros";
+            // 
             // clientesToolStripMenuItem
             // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoClienteToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // equipamentosToolStripMenuItem
             // 
+            this.equipamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoEquipamentoToolStripMenuItem});
             this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
             this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.equipamentosToolStripMenuItem.Text = "Equipamentos";
             // 
             // serviçosToolStripMenuItem
             // 
+            this.serviçosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoServiçoToolStripMenuItem});
             this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
             this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             // 
-            // miConsultas
+            // toolStripSeparator1
             // 
-            this.miConsultas.Name = "miConsultas";
-            this.miConsultas.Size = new System.Drawing.Size(71, 20);
-            this.miConsultas.Text = "Consultas";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // usuáriosToolStripMenuItem
             // 
@@ -197,18 +207,35 @@
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
-            // toolStripSeparator1
+            // miConsultas
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.miConsultas.Name = "miConsultas";
+            this.miConsultas.Size = new System.Drawing.Size(71, 20);
+            this.miConsultas.Text = "Consultas";
             // 
-            // rodStatus
+            // miSobre
             // 
-            this.rodStatus.Dock = System.Windows.Forms.DockStyle.None;
-            this.rodStatus.Location = new System.Drawing.Point(0, 0);
-            this.rodStatus.Name = "rodStatus";
-            this.rodStatus.Size = new System.Drawing.Size(653, 22);
-            this.rodStatus.TabIndex = 0;
+            this.miSobre.Name = "miSobre";
+            this.miSobre.Size = new System.Drawing.Size(49, 20);
+            this.miSobre.Text = "Sobre";
+            // 
+            // novoClienteToolStripMenuItem
+            // 
+            this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
+            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoClienteToolStripMenuItem.Text = "Novo Cliente...";
+            // 
+            // novoEquipamentoToolStripMenuItem
+            // 
+            this.novoEquipamentoToolStripMenuItem.Name = "novoEquipamentoToolStripMenuItem";
+            this.novoEquipamentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.novoEquipamentoToolStripMenuItem.Text = "Novo Equipamento...";
+            // 
+            // novoServiçoToolStripMenuItem
+            // 
+            this.novoServiçoToolStripMenuItem.Name = "novoServiçoToolStripMenuItem";
+            this.novoServiçoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.novoServiçoToolStripMenuItem.Text = "Novo Serviço...";
             // 
             // frmPrincipal
             // 
@@ -228,10 +255,10 @@
             this.tscContainer.TopToolStripPanel.PerformLayout();
             this.tscContainer.ResumeLayout(false);
             this.tscContainer.PerformLayout();
-            this.mnuPrincipal.ResumeLayout(false);
-            this.mnuPrincipal.PerformLayout();
             this.mnuLateral.ResumeLayout(false);
             this.mnuLateral.PerformLayout();
+            this.mnuPrincipal.ResumeLayout(false);
+            this.mnuPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,6 +281,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.StatusStrip rodStatus;
+        private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoEquipamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoServiçoToolStripMenuItem;
     }
 }
 

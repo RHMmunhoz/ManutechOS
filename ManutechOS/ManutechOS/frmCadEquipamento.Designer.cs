@@ -197,13 +197,13 @@
             this.rdbCPF.Name = "rdbCPF";
             this.rdbCPF.Size = new System.Drawing.Size(77, 17);
             this.rdbCPF.TabIndex = 6;
-            this.rdbCPF.TabStop = true;
             this.rdbCPF.Text = "CPF/CNPJ";
             this.rdbCPF.UseVisualStyleBackColor = true;
             // 
             // rdbNome
             // 
             this.rdbNome.AutoSize = true;
+            this.rdbNome.Checked = true;
             this.rdbNome.Location = new System.Drawing.Point(386, 14);
             this.rdbNome.Name = "rdbNome";
             this.rdbNome.Size = new System.Drawing.Size(53, 17);

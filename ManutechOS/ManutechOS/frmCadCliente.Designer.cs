@@ -668,13 +668,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 498);
+            this.ClientSize = new System.Drawing.Size(591, 503);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gboTipo);
-            this.Controls.Add(this.gboDadosEmpresa);
             this.Controls.Add(this.gboContato);
             this.Controls.Add(this.gboEndereco);
+            this.Controls.Add(this.gboDadosEmpresa);
             this.Controls.Add(this.gboDados);
             this.Name = "frmCadCliente";
             this.Text = "Cadastro de Clientes";

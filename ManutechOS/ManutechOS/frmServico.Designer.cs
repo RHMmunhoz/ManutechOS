@@ -53,7 +53,7 @@
             this.pnBotoes.Controls.Add(this.btnExcluir);
             this.pnBotoes.Controls.Add(this.btnEditar);
             this.pnBotoes.Controls.Add(this.btnAdd);
-            this.pnBotoes.Location = new System.Drawing.Point(99, 394);
+            this.pnBotoes.Location = new System.Drawing.Point(103, 394);
             this.pnBotoes.Name = "pnBotoes";
             this.pnBotoes.Size = new System.Drawing.Size(426, 46);
             this.pnBotoes.TabIndex = 8;
@@ -109,9 +109,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gboRegistros.Controls.Add(this.dgvServicos);
-            this.gboRegistros.Location = new System.Drawing.Point(6, 89);
+            this.gboRegistros.Location = new System.Drawing.Point(9, 89);
             this.gboRegistros.Name = "gboRegistros";
-            this.gboRegistros.Size = new System.Drawing.Size(613, 299);
+            this.gboRegistros.Size = new System.Drawing.Size(614, 299);
             this.gboRegistros.TabIndex = 7;
             this.gboRegistros.TabStop = false;
             this.gboRegistros.Text = "Registros";
@@ -125,7 +125,7 @@
             this.dgvServicos.Location = new System.Drawing.Point(3, 16);
             this.dgvServicos.Name = "dgvServicos";
             this.dgvServicos.ReadOnly = true;
-            this.dgvServicos.Size = new System.Drawing.Size(607, 280);
+            this.dgvServicos.Size = new System.Drawing.Size(608, 280);
             this.dgvServicos.TabIndex = 0;
             // 
             // gboFiltro
@@ -133,7 +133,7 @@
             this.gboFiltro.Controls.Add(this.btnBuscar);
             this.gboFiltro.Controls.Add(this.txtDescricao);
             this.gboFiltro.Controls.Add(this.lblDescricao);
-            this.gboFiltro.Location = new System.Drawing.Point(6, 5);
+            this.gboFiltro.Location = new System.Drawing.Point(9, 5);
             this.gboFiltro.Name = "gboFiltro";
             this.gboFiltro.Size = new System.Drawing.Size(613, 78);
             this.gboFiltro.TabIndex = 6;
@@ -171,11 +171,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 449);
+            this.ClientSize = new System.Drawing.Size(626, 449);
             this.Controls.Add(this.pnBotoes);
             this.Controls.Add(this.gboRegistros);
             this.Controls.Add(this.gboFiltro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmServico";
             this.Text = "Consulta de Serviços";
             this.pnBotoes.ResumeLayout(false);

@@ -247,6 +247,7 @@
             this.ClientSize = new System.Drawing.Size(653, 427);
             this.Controls.Add(this.tscContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuPrincipal;
             this.MaximizeBox = false;
             this.Name = "frmPrincipal";

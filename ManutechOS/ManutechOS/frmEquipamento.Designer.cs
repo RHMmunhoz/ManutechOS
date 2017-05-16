@@ -176,6 +176,7 @@
             this.Controls.Add(this.gboRegistros);
             this.Controls.Add(this.gboFiltro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEquipamento";
             this.Text = "Consulta de Equipamentos";
             this.pnBotoes.ResumeLayout(false);

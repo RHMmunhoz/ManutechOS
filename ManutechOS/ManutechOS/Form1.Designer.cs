@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.tscContainer = new System.Windows.Forms.ToolStripContainer();
             this.rodStatus = new System.Windows.Forms.StatusStrip();
+            this.lblUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.mnuLateral = new System.Windows.Forms.ToolStrip();
             this.btnClientes = new System.Windows.Forms.ToolStripButton();
             this.btnEquipamentos = new System.Windows.Forms.ToolStripButton();
@@ -48,10 +49,12 @@
             this.miUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnTecnico = new System.Windows.Forms.ToolStripButton();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
             this.tscContainer.SuspendLayout();
+            this.rodStatus.SuspendLayout();
             this.mnuLateral.SuspendLayout();
             this.mnuPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -87,10 +90,18 @@
             // rodStatus
             // 
             this.rodStatus.Dock = System.Windows.Forms.DockStyle.None;
+            this.rodStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblUser});
             this.rodStatus.Location = new System.Drawing.Point(0, 0);
             this.rodStatus.Name = "rodStatus";
             this.rodStatus.Size = new System.Drawing.Size(653, 22);
             this.rodStatus.TabIndex = 0;
+            // 
+            // lblUser
+            // 
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(93, 17);
+            this.lblUser.Text = "Usuário Logado:";
             // 
             // mnuLateral
             // 
@@ -100,14 +111,16 @@
             this.btnClientes,
             this.btnEquipamentos,
             this.btnServicos,
-            this.btnOS});
+            this.btnOS,
+            this.btnTecnico});
             this.mnuLateral.Location = new System.Drawing.Point(0, 3);
             this.mnuLateral.Name = "mnuLateral";
-            this.mnuLateral.Size = new System.Drawing.Size(129, 218);
+            this.mnuLateral.Size = new System.Drawing.Size(129, 272);
             this.mnuLateral.TabIndex = 0;
             // 
             // btnClientes
             // 
+            this.btnClientes.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -130,6 +143,7 @@
             // 
             // btnServicos
             // 
+            this.btnServicos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnServicos.Image = ((System.Drawing.Image)(resources.GetObject("btnServicos.Image")));
             this.btnServicos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnServicos.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -149,6 +163,7 @@
             this.btnOS.Text = "Ordem de Serviço (F5)";
             this.btnOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOS.ToolTipText = "O.S (F)";
+            this.btnOS.Click += new System.EventHandler(this.btnOS_Click);
             // 
             // mnuPrincipal
             // 
@@ -239,6 +254,18 @@
             this.miSobre.Name = "miSobre";
             this.miSobre.Size = new System.Drawing.Size(49, 20);
             this.miSobre.Text = "Sobre";
+            this.miSobre.Click += new System.EventHandler(this.miSobre_Click);
+            // 
+            // btnTecnico
+            // 
+            this.btnTecnico.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTecnico.Image = ((System.Drawing.Image)(resources.GetObject("btnTecnico.Image")));
+            this.btnTecnico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnTecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTecnico.Name = "btnTecnico";
+            this.btnTecnico.Size = new System.Drawing.Size(127, 51);
+            this.btnTecnico.Text = "Técnico (F6)";
+            this.btnTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // frmPrincipal
             // 
@@ -262,6 +289,8 @@
             this.tscContainer.TopToolStripPanel.PerformLayout();
             this.tscContainer.ResumeLayout(false);
             this.tscContainer.PerformLayout();
+            this.rodStatus.ResumeLayout(false);
+            this.rodStatus.PerformLayout();
             this.mnuLateral.ResumeLayout(false);
             this.mnuLateral.PerformLayout();
             this.mnuPrincipal.ResumeLayout(false);
@@ -291,6 +320,8 @@
         private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoEquipamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoServiçoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel lblUser;
+        private System.Windows.Forms.ToolStripButton btnTecnico;
     }
 }
 

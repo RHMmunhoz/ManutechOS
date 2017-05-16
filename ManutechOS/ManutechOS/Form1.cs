@@ -61,5 +61,27 @@ namespace ManutechOS
                 formServico.Show();
             }
         }
+
+        private void miSobre_Click(object sender, EventArgs e)
+        {
+            frmSobre formSobre = new frmSobre();
+            formSobre.BringToFront();
+            formSobre.ShowDialog();
+        }
+
+        private void btnOS_Click(object sender, EventArgs e)
+        {
+            frmOS f = (frmOS)Application.OpenForms["frmOS"];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                frmOS formOS = new frmOS();
+                formOS.TopLevel = false;
+                tscContainer.ContentPanel.Controls.Add(formOS);
+                formOS.BringToFront();
+                formOS.Show();
+            }
+        }
     }
 }

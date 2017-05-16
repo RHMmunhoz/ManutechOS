@@ -101,6 +101,7 @@
             this.btnAdd.Text = "Novo";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // gboRegistros
             // 
@@ -175,6 +176,7 @@
             this.Controls.Add(this.gboRegistros);
             this.Controls.Add(this.gboFiltro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTecnico";
             this.Text = "Consultar Técnico";
             this.pnBotoes.ResumeLayout(false);

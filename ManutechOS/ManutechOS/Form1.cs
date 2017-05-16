@@ -83,5 +83,20 @@ namespace ManutechOS
                 formOS.Show();
             }
         }
+
+        private void btnTecnico_Click(object sender, EventArgs e)
+        {
+            frmTecnico f = (frmTecnico)Application.OpenForms["frmTecnico"];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                frmTecnico formTecnico = new frmTecnico();
+                formTecnico.TopLevel = false;
+                tscContainer.ContentPanel.Controls.Add(formTecnico);
+                formTecnico.BringToFront();
+                formTecnico.Show();
+            }
+        }
     }
 }

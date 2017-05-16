@@ -16,5 +16,17 @@ namespace ManutechOS
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmCadOS formCadOS = new frmCadOS();
+            formCadOS.TopLevel = false;
+            //Adiciona o Form dentro do Container Principal
+            Parent.Controls.Add(formCadOS);
+            formCadOS.Parent = Parent;
+            //Coloca o Form a frente dos outros
+            formCadOS.BringToFront();
+            formCadOS.Show();
+        }
     }
 }

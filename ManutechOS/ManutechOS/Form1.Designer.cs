@@ -115,7 +115,7 @@
             this.btnTecnico});
             this.mnuLateral.Location = new System.Drawing.Point(0, 3);
             this.mnuLateral.Name = "mnuLateral";
-            this.mnuLateral.Size = new System.Drawing.Size(129, 272);
+            this.mnuLateral.Size = new System.Drawing.Size(129, 291);
             this.mnuLateral.TabIndex = 0;
             // 
             // btnClientes
@@ -266,6 +266,7 @@
             this.btnTecnico.Size = new System.Drawing.Size(127, 51);
             this.btnTecnico.Text = "Técnico (F6)";
             this.btnTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTecnico.Click += new System.EventHandler(this.btnTecnico_Click);
             // 
             // frmPrincipal
             // 

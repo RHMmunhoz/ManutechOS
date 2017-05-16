@@ -35,18 +35,18 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gboRegistros = new System.Windows.Forms.GroupBox();
-            this.dgvServicos = new System.Windows.Forms.DataGridView();
+            this.dgvOS = new System.Windows.Forms.DataGridView();
             this.gboFiltro = new System.Windows.Forms.GroupBox();
+            this.rdbStatus = new System.Windows.Forms.RadioButton();
+            this.rdbCliente = new System.Windows.Forms.RadioButton();
+            this.rdbCodigo = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rdbCodigo = new System.Windows.Forms.RadioButton();
-            this.rdbCliente = new System.Windows.Forms.RadioButton();
-            this.rdbStatus = new System.Windows.Forms.RadioButton();
             this.pnBotoes.SuspendLayout();
             this.gboRegistros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvServicos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOS)).BeginInit();
             this.gboFiltro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,13 +105,14 @@
             this.btnAdd.Text = "Novo";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // gboRegistros
             // 
             this.gboRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gboRegistros.Controls.Add(this.dgvServicos);
+            this.gboRegistros.Controls.Add(this.dgvOS);
             this.gboRegistros.Location = new System.Drawing.Point(3, 96);
             this.gboRegistros.Name = "gboRegistros";
             this.gboRegistros.Size = new System.Drawing.Size(621, 292);
@@ -119,17 +120,17 @@
             this.gboRegistros.TabStop = false;
             this.gboRegistros.Text = "Registros";
             // 
-            // dgvServicos
+            // dgvOS
             // 
-            this.dgvServicos.AllowUserToAddRows = false;
-            this.dgvServicos.AllowUserToDeleteRows = false;
-            this.dgvServicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServicos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvServicos.Location = new System.Drawing.Point(3, 16);
-            this.dgvServicos.Name = "dgvServicos";
-            this.dgvServicos.ReadOnly = true;
-            this.dgvServicos.Size = new System.Drawing.Size(615, 273);
-            this.dgvServicos.TabIndex = 0;
+            this.dgvOS.AllowUserToAddRows = false;
+            this.dgvOS.AllowUserToDeleteRows = false;
+            this.dgvOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOS.Location = new System.Drawing.Point(3, 16);
+            this.dgvOS.Name = "dgvOS";
+            this.dgvOS.ReadOnly = true;
+            this.dgvOS.Size = new System.Drawing.Size(615, 273);
+            this.dgvOS.TabIndex = 0;
             // 
             // gboFiltro
             // 
@@ -146,6 +147,47 @@
             this.gboFiltro.TabIndex = 9;
             this.gboFiltro.TabStop = false;
             this.gboFiltro.Text = "Filtro";
+            // 
+            // rdbStatus
+            // 
+            this.rdbStatus.AutoSize = true;
+            this.rdbStatus.Location = new System.Drawing.Point(222, 55);
+            this.rdbStatus.Name = "rdbStatus";
+            this.rdbStatus.Size = new System.Drawing.Size(55, 17);
+            this.rdbStatus.TabIndex = 6;
+            this.rdbStatus.Text = "Status";
+            this.rdbStatus.UseVisualStyleBackColor = true;
+            // 
+            // rdbCliente
+            // 
+            this.rdbCliente.AutoSize = true;
+            this.rdbCliente.Location = new System.Drawing.Point(159, 55);
+            this.rdbCliente.Name = "rdbCliente";
+            this.rdbCliente.Size = new System.Drawing.Size(57, 17);
+            this.rdbCliente.TabIndex = 5;
+            this.rdbCliente.Text = "Cliente";
+            this.rdbCliente.UseVisualStyleBackColor = true;
+            // 
+            // rdbCodigo
+            // 
+            this.rdbCodigo.AutoSize = true;
+            this.rdbCodigo.Checked = true;
+            this.rdbCodigo.Location = new System.Drawing.Point(95, 55);
+            this.rdbCodigo.Name = "rdbCodigo";
+            this.rdbCodigo.Size = new System.Drawing.Size(58, 17);
+            this.rdbCodigo.TabIndex = 4;
+            this.rdbCodigo.TabStop = true;
+            this.rdbCodigo.Text = "Código";
+            this.rdbCodigo.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Pesquisar por:";
             // 
             // btnBuscar
             // 
@@ -174,47 +216,6 @@
             this.lblDescricao.TabIndex = 0;
             this.lblDescricao.Text = "Código";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Pesquisar por:";
-            // 
-            // rdbCodigo
-            // 
-            this.rdbCodigo.AutoSize = true;
-            this.rdbCodigo.Checked = true;
-            this.rdbCodigo.Location = new System.Drawing.Point(95, 55);
-            this.rdbCodigo.Name = "rdbCodigo";
-            this.rdbCodigo.Size = new System.Drawing.Size(58, 17);
-            this.rdbCodigo.TabIndex = 4;
-            this.rdbCodigo.TabStop = true;
-            this.rdbCodigo.Text = "Código";
-            this.rdbCodigo.UseVisualStyleBackColor = true;
-            // 
-            // rdbCliente
-            // 
-            this.rdbCliente.AutoSize = true;
-            this.rdbCliente.Location = new System.Drawing.Point(159, 55);
-            this.rdbCliente.Name = "rdbCliente";
-            this.rdbCliente.Size = new System.Drawing.Size(57, 17);
-            this.rdbCliente.TabIndex = 5;
-            this.rdbCliente.Text = "Cliente";
-            this.rdbCliente.UseVisualStyleBackColor = true;
-            // 
-            // rdbStatus
-            // 
-            this.rdbStatus.AutoSize = true;
-            this.rdbStatus.Location = new System.Drawing.Point(222, 55);
-            this.rdbStatus.Name = "rdbStatus";
-            this.rdbStatus.Size = new System.Drawing.Size(55, 17);
-            this.rdbStatus.TabIndex = 6;
-            this.rdbStatus.Text = "Status";
-            this.rdbStatus.UseVisualStyleBackColor = true;
-            // 
             // frmOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,11 +224,12 @@
             this.Controls.Add(this.pnBotoes);
             this.Controls.Add(this.gboRegistros);
             this.Controls.Add(this.gboFiltro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOS";
             this.Text = "Consultar Ordem de Serviço";
             this.pnBotoes.ResumeLayout(false);
             this.gboRegistros.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvServicos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOS)).EndInit();
             this.gboFiltro.ResumeLayout(false);
             this.gboFiltro.PerformLayout();
             this.ResumeLayout(false);
@@ -242,7 +244,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox gboRegistros;
-        private System.Windows.Forms.DataGridView dgvServicos;
+        private System.Windows.Forms.DataGridView dgvOS;
         private System.Windows.Forms.GroupBox gboFiltro;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtDescricao;

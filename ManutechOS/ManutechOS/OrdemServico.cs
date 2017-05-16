@@ -10,6 +10,7 @@ namespace ManutechOS
     {
         //Atributos
         private Cliente cliente = new Cliente();
+        private Tecnico tecnico = new Tecnico();
         private List<Servico> servicos = new List<Servico>();
         private List<Equipamento> equipamentos = new List<Equipamento>();
         private string status, info;

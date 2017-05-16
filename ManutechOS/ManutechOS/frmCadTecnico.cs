@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ManutechOS
 {
-    public partial class frmCadCliente : Form
+    public partial class frmCadTecnico : Form
     {
-        public frmCadCliente()
+        public frmCadTecnico()
         {
             InitializeComponent();
-        }
-
-        private void frmCadCliente_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -48,6 +48,7 @@
             // 
             // pnBotoes
             // 
+            this.pnBotoes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pnBotoes.Controls.Add(this.btnVisualizar);
             this.pnBotoes.Controls.Add(this.btnExcluir);
             this.pnBotoes.Controls.Add(this.btnEditar);
@@ -100,9 +101,13 @@
             this.btnAdd.Text = "Novo";
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // gboRegistros
             // 
+            this.gboRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gboRegistros.Controls.Add(this.dgvEquipamentos);
             this.gboRegistros.Location = new System.Drawing.Point(8, 90);
             this.gboRegistros.Name = "gboRegistros";
@@ -170,6 +175,7 @@
             this.Controls.Add(this.pnBotoes);
             this.Controls.Add(this.gboRegistros);
             this.Controls.Add(this.gboFiltro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmEquipamento";
             this.Text = "Consulta de Equipamentos";
             this.pnBotoes.ResumeLayout(false);

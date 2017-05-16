@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.gboFiltro = new System.Windows.Forms.GroupBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtBusca = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.gboRegistros = new System.Windows.Forms.GroupBox();
-            this.pnBotoes = new System.Windows.Forms.Panel();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnVisualizar = new System.Windows.Forms.Button();
-            this.lblPessoa = new System.Windows.Forms.Label();
-            this.rdbFisica = new System.Windows.Forms.RadioButton();
             this.rdbJuridica = new System.Windows.Forms.RadioButton();
+            this.rdbFisica = new System.Windows.Forms.RadioButton();
+            this.lblPessoa = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBusca = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.gboRegistros = new System.Windows.Forms.GroupBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.pnBotoes = new System.Windows.Forms.Panel();
+            this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.gboFiltro.SuspendLayout();
             this.gboRegistros.SuspendLayout();
-            this.pnBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            this.pnBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboFiltro
@@ -64,106 +64,15 @@
             this.gboFiltro.TabStop = false;
             this.gboFiltro.Text = "Filtro";
             // 
-            // lblNome
+            // rdbJuridica
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(15, 16);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtBusca
-            // 
-            this.txtBusca.Location = new System.Drawing.Point(18, 32);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(499, 20);
-            this.txtBusca.TabIndex = 1;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(523, 16);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(84, 45);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // gboRegistros
-            // 
-            this.gboRegistros.Controls.Add(this.dgvClientes);
-            this.gboRegistros.Location = new System.Drawing.Point(12, 88);
-            this.gboRegistros.Name = "gboRegistros";
-            this.gboRegistros.Size = new System.Drawing.Size(613, 299);
-            this.gboRegistros.TabIndex = 1;
-            this.gboRegistros.TabStop = false;
-            this.gboRegistros.Text = "Registros";
-            // 
-            // pnBotoes
-            // 
-            this.pnBotoes.Controls.Add(this.btnVisualizar);
-            this.pnBotoes.Controls.Add(this.btnExcluir);
-            this.pnBotoes.Controls.Add(this.btnEditar);
-            this.pnBotoes.Controls.Add(this.btnAdd);
-            this.pnBotoes.Location = new System.Drawing.Point(105, 393);
-            this.pnBotoes.Name = "pnBotoes";
-            this.pnBotoes.Size = new System.Drawing.Size(426, 46);
-            this.pnBotoes.TabIndex = 2;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(13, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 40);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Novo";
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(115, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 40);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
-            this.btnExcluir.Location = new System.Drawing.Point(217, 3);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(78, 40);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnVisualizar
-            // 
-            this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
-            this.btnVisualizar.Location = new System.Drawing.Point(322, 3);
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(91, 40);
-            this.btnVisualizar.TabIndex = 3;
-            this.btnVisualizar.Text = "Visualizar";
-            this.btnVisualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVisualizar.UseVisualStyleBackColor = true;
-            // 
-            // lblPessoa
-            // 
-            this.lblPessoa.AutoSize = true;
-            this.lblPessoa.Location = new System.Drawing.Point(15, 59);
-            this.lblPessoa.Name = "lblPessoa";
-            this.lblPessoa.Size = new System.Drawing.Size(45, 13);
-            this.lblPessoa.TabIndex = 3;
-            this.lblPessoa.Text = "Pessoa:";
+            this.rdbJuridica.AutoSize = true;
+            this.rdbJuridica.Location = new System.Drawing.Point(126, 57);
+            this.rdbJuridica.Name = "rdbJuridica";
+            this.rdbJuridica.Size = new System.Drawing.Size(63, 17);
+            this.rdbJuridica.TabIndex = 5;
+            this.rdbJuridica.Text = "Jurídica";
+            this.rdbJuridica.UseVisualStyleBackColor = true;
             // 
             // rdbFisica
             // 
@@ -177,15 +86,54 @@
             this.rdbFisica.Text = "Física";
             this.rdbFisica.UseVisualStyleBackColor = true;
             // 
-            // rdbJuridica
+            // lblPessoa
             // 
-            this.rdbJuridica.AutoSize = true;
-            this.rdbJuridica.Location = new System.Drawing.Point(126, 57);
-            this.rdbJuridica.Name = "rdbJuridica";
-            this.rdbJuridica.Size = new System.Drawing.Size(63, 17);
-            this.rdbJuridica.TabIndex = 5;
-            this.rdbJuridica.Text = "Jurídica";
-            this.rdbJuridica.UseVisualStyleBackColor = true;
+            this.lblPessoa.AutoSize = true;
+            this.lblPessoa.Location = new System.Drawing.Point(15, 59);
+            this.lblPessoa.Name = "lblPessoa";
+            this.lblPessoa.Size = new System.Drawing.Size(45, 13);
+            this.lblPessoa.TabIndex = 3;
+            this.lblPessoa.Text = "Pessoa:";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(523, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(84, 45);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.Location = new System.Drawing.Point(18, 32);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(499, 20);
+            this.txtBusca.TabIndex = 1;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(15, 16);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome";
+            // 
+            // gboRegistros
+            // 
+            this.gboRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gboRegistros.Controls.Add(this.dgvClientes);
+            this.gboRegistros.Location = new System.Drawing.Point(12, 88);
+            this.gboRegistros.Name = "gboRegistros";
+            this.gboRegistros.Size = new System.Drawing.Size(613, 299);
+            this.gboRegistros.TabIndex = 1;
+            this.gboRegistros.TabStop = false;
+            this.gboRegistros.Text = "Registros";
             // 
             // dgvClientes
             // 
@@ -199,6 +147,63 @@
             this.dgvClientes.Size = new System.Drawing.Size(607, 280);
             this.dgvClientes.TabIndex = 0;
             // 
+            // pnBotoes
+            // 
+            this.pnBotoes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pnBotoes.Controls.Add(this.btnVisualizar);
+            this.pnBotoes.Controls.Add(this.btnExcluir);
+            this.pnBotoes.Controls.Add(this.btnEditar);
+            this.pnBotoes.Controls.Add(this.btnAdd);
+            this.pnBotoes.Location = new System.Drawing.Point(105, 390);
+            this.pnBotoes.Name = "pnBotoes";
+            this.pnBotoes.Size = new System.Drawing.Size(426, 49);
+            this.pnBotoes.TabIndex = 2;
+            // 
+            // btnVisualizar
+            // 
+            this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
+            this.btnVisualizar.Location = new System.Drawing.Point(322, 3);
+            this.btnVisualizar.Name = "btnVisualizar";
+            this.btnVisualizar.Size = new System.Drawing.Size(91, 40);
+            this.btnVisualizar.TabIndex = 3;
+            this.btnVisualizar.Text = "Visualizar";
+            this.btnVisualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVisualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Location = new System.Drawing.Point(217, 3);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(78, 40);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(115, 3);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 40);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(13, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 40);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Novo";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,13 +212,15 @@
             this.Controls.Add(this.pnBotoes);
             this.Controls.Add(this.gboRegistros);
             this.Controls.Add(this.gboFiltro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Clientes";
             this.gboFiltro.ResumeLayout(false);
             this.gboFiltro.PerformLayout();
             this.gboRegistros.ResumeLayout(false);
-            this.pnBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            this.pnBotoes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

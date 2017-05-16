@@ -676,7 +676,9 @@
             this.Controls.Add(this.gboEndereco);
             this.Controls.Add(this.gboDadosEmpresa);
             this.Controls.Add(this.gboDados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Clientes";
             this.gboDados.ResumeLayout(false);
             this.gboDados.PerformLayout();

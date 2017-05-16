@@ -38,16 +38,16 @@
             this.btnOS = new System.Windows.Forms.ToolStripButton();
             this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
             this.miCadastros = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.equipamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miEquipamentos = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miServico = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
@@ -115,6 +115,7 @@
             this.btnClientes.Size = new System.Drawing.Size(127, 51);
             this.btnClientes.Text = "Clientes (F2)";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnEquipamentos
             // 
@@ -125,6 +126,7 @@
             this.btnEquipamentos.Size = new System.Drawing.Size(127, 51);
             this.btnEquipamentos.Text = "Equipamentos (F3)";
             this.btnEquipamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEquipamentos.Click += new System.EventHandler(this.btnEquipamentos_Click);
             // 
             // btnServicos
             // 
@@ -135,6 +137,7 @@
             this.btnServicos.Size = new System.Drawing.Size(127, 51);
             this.btnServicos.Text = "Serviços (F4)";
             this.btnServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnServicos.Click += new System.EventHandler(this.btnServicos_Click);
             // 
             // btnOS
             // 
@@ -163,49 +166,67 @@
             // miCadastros
             // 
             this.miCadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.equipamentosToolStripMenuItem,
-            this.serviçosToolStripMenuItem,
+            this.miClientes,
+            this.miEquipamentos,
+            this.miServico,
             this.toolStripSeparator1,
-            this.usuáriosToolStripMenuItem});
+            this.miUsuario});
             this.miCadastros.Name = "miCadastros";
             this.miCadastros.Size = new System.Drawing.Size(71, 20);
             this.miCadastros.Text = "Cadastros";
             // 
-            // clientesToolStripMenuItem
+            // miClientes
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miClientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoClienteToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.miClientes.Name = "miClientes";
+            this.miClientes.Size = new System.Drawing.Size(152, 22);
+            this.miClientes.Text = "Clientes";
             // 
-            // equipamentosToolStripMenuItem
+            // novoClienteToolStripMenuItem
             // 
-            this.equipamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
+            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoClienteToolStripMenuItem.Text = "Novo Cliente...";
+            // 
+            // miEquipamentos
+            // 
+            this.miEquipamentos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoEquipamentoToolStripMenuItem});
-            this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
-            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.equipamentosToolStripMenuItem.Text = "Equipamentos";
+            this.miEquipamentos.Name = "miEquipamentos";
+            this.miEquipamentos.Size = new System.Drawing.Size(152, 22);
+            this.miEquipamentos.Text = "Equipamentos";
             // 
-            // serviçosToolStripMenuItem
+            // novoEquipamentoToolStripMenuItem
             // 
-            this.serviçosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoEquipamentoToolStripMenuItem.Name = "novoEquipamentoToolStripMenuItem";
+            this.novoEquipamentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.novoEquipamentoToolStripMenuItem.Text = "Novo Equipamento...";
+            // 
+            // miServico
+            // 
+            this.miServico.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoServiçoToolStripMenuItem});
-            this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.serviçosToolStripMenuItem.Text = "Serviços";
+            this.miServico.Name = "miServico";
+            this.miServico.Size = new System.Drawing.Size(152, 22);
+            this.miServico.Text = "Serviços";
+            // 
+            // novoServiçoToolStripMenuItem
+            // 
+            this.novoServiçoToolStripMenuItem.Name = "novoServiçoToolStripMenuItem";
+            this.novoServiçoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.novoServiçoToolStripMenuItem.Text = "Novo Serviço...";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
-            // usuáriosToolStripMenuItem
+            // miUsuario
             // 
-            this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuáriosToolStripMenuItem.Text = "Usuários";
+            this.miUsuario.Name = "miUsuario";
+            this.miUsuario.Size = new System.Drawing.Size(152, 22);
+            this.miUsuario.Text = "Usuários";
             // 
             // miConsultas
             // 
@@ -219,34 +240,19 @@
             this.miSobre.Size = new System.Drawing.Size(49, 20);
             this.miSobre.Text = "Sobre";
             // 
-            // novoClienteToolStripMenuItem
-            // 
-            this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
-            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.novoClienteToolStripMenuItem.Text = "Novo Cliente...";
-            // 
-            // novoEquipamentoToolStripMenuItem
-            // 
-            this.novoEquipamentoToolStripMenuItem.Name = "novoEquipamentoToolStripMenuItem";
-            this.novoEquipamentoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.novoEquipamentoToolStripMenuItem.Text = "Novo Equipamento...";
-            // 
-            // novoServiçoToolStripMenuItem
-            // 
-            this.novoServiçoToolStripMenuItem.Name = "novoServiçoToolStripMenuItem";
-            this.novoServiçoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.novoServiçoToolStripMenuItem.Text = "Novo Serviço...";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 427);
             this.Controls.Add(this.tscContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.mnuPrincipal;
+            this.MaximizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manutech O.S - Gestão de Ordem de Serviços";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tscContainer.BottomToolStripPanel.ResumeLayout(false);
             this.tscContainer.BottomToolStripPanel.PerformLayout();
             this.tscContainer.LeftToolStripPanel.ResumeLayout(false);
@@ -274,12 +280,12 @@
         private System.Windows.Forms.ToolStripButton btnEquipamentos;
         private System.Windows.Forms.ToolStripButton btnServicos;
         private System.Windows.Forms.ToolStripButton btnOS;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem equipamentosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem serviçosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miClientes;
+        private System.Windows.Forms.ToolStripMenuItem miEquipamentos;
+        private System.Windows.Forms.ToolStripMenuItem miServico;
         private System.Windows.Forms.ToolStripMenuItem miConsultas;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miUsuario;
         private System.Windows.Forms.StatusStrip rodStatus;
         private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoEquipamentoToolStripMenuItem;

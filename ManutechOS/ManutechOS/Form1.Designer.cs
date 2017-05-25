@@ -37,6 +37,7 @@
             this.btnEquipamentos = new System.Windows.Forms.ToolStripButton();
             this.btnServicos = new System.Windows.Forms.ToolStripButton();
             this.btnOS = new System.Windows.Forms.ToolStripButton();
+            this.btnTecnico = new System.Windows.Forms.ToolStripButton();
             this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
             this.miCadastros = new System.Windows.Forms.ToolStripMenuItem();
             this.miClientes = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +49,9 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.miUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emissãoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnTecnico = new System.Windows.Forms.ToolStripButton();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
@@ -76,6 +78,7 @@
             // 
             // tscContainer.LeftToolStripPanel
             // 
+            this.tscContainer.LeftToolStripPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.tscContainer.LeftToolStripPanel.Controls.Add(this.mnuLateral);
             this.tscContainer.Location = new System.Drawing.Point(0, 0);
             this.tscContainer.Name = "tscContainer";
@@ -115,7 +118,7 @@
             this.btnTecnico});
             this.mnuLateral.Location = new System.Drawing.Point(0, 3);
             this.mnuLateral.Name = "mnuLateral";
-            this.mnuLateral.Size = new System.Drawing.Size(129, 291);
+            this.mnuLateral.Size = new System.Drawing.Size(129, 272);
             this.mnuLateral.TabIndex = 0;
             // 
             // btnClientes
@@ -165,12 +168,27 @@
             this.btnOS.ToolTipText = "O.S (F)";
             this.btnOS.Click += new System.EventHandler(this.btnOS_Click);
             // 
+            // btnTecnico
+            // 
+            this.btnTecnico.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTecnico.Image = ((System.Drawing.Image)(resources.GetObject("btnTecnico.Image")));
+            this.btnTecnico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnTecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTecnico.Name = "btnTecnico";
+            this.btnTecnico.Size = new System.Drawing.Size(127, 51);
+            this.btnTecnico.Text = "Técnico (F6)";
+            this.btnTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTecnico.Click += new System.EventHandler(this.btnTecnico_Click);
+            // 
             // mnuPrincipal
             // 
+            this.mnuPrincipal.BackColor = System.Drawing.SystemColors.ControlDark;
             this.mnuPrincipal.Dock = System.Windows.Forms.DockStyle.None;
             this.mnuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miCadastros,
             this.miConsultas,
+            this.relatóriosToolStripMenuItem,
+            this.emissãoDeDocumentosToolStripMenuItem,
             this.miSobre});
             this.mnuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnuPrincipal.Name = "mnuPrincipal";
@@ -197,6 +215,7 @@
             this.miClientes.Name = "miClientes";
             this.miClientes.Size = new System.Drawing.Size(152, 22);
             this.miClientes.Text = "Clientes";
+            this.miClientes.Click += new System.EventHandler(this.miClientes_Click);
             // 
             // novoClienteToolStripMenuItem
             // 
@@ -211,6 +230,7 @@
             this.miEquipamentos.Name = "miEquipamentos";
             this.miEquipamentos.Size = new System.Drawing.Size(152, 22);
             this.miEquipamentos.Text = "Equipamentos";
+            this.miEquipamentos.Click += new System.EventHandler(this.miEquipamentos_Click);
             // 
             // novoEquipamentoToolStripMenuItem
             // 
@@ -225,6 +245,7 @@
             this.miServico.Name = "miServico";
             this.miServico.Size = new System.Drawing.Size(152, 22);
             this.miServico.Text = "Serviços";
+            this.miServico.Click += new System.EventHandler(this.miServico_Click);
             // 
             // novoServiçoToolStripMenuItem
             // 
@@ -249,24 +270,24 @@
             this.miConsultas.Size = new System.Drawing.Size(71, 20);
             this.miConsultas.Text = "Consultas";
             // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // emissãoDeDocumentosToolStripMenuItem
+            // 
+            this.emissãoDeDocumentosToolStripMenuItem.Name = "emissãoDeDocumentosToolStripMenuItem";
+            this.emissãoDeDocumentosToolStripMenuItem.Size = new System.Drawing.Size(149, 20);
+            this.emissãoDeDocumentosToolStripMenuItem.Text = "Emissão de Documentos";
+            // 
             // miSobre
             // 
             this.miSobre.Name = "miSobre";
             this.miSobre.Size = new System.Drawing.Size(49, 20);
             this.miSobre.Text = "Sobre";
             this.miSobre.Click += new System.EventHandler(this.miSobre_Click);
-            // 
-            // btnTecnico
-            // 
-            this.btnTecnico.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnTecnico.Image = ((System.Drawing.Image)(resources.GetObject("btnTecnico.Image")));
-            this.btnTecnico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnTecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTecnico.Name = "btnTecnico";
-            this.btnTecnico.Size = new System.Drawing.Size(127, 51);
-            this.btnTecnico.Text = "Técnico (F6)";
-            this.btnTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTecnico.Click += new System.EventHandler(this.btnTecnico_Click);
             // 
             // frmPrincipal
             // 
@@ -323,6 +344,8 @@
         private System.Windows.Forms.ToolStripMenuItem novoServiçoToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel lblUser;
         private System.Windows.Forms.ToolStripButton btnTecnico;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emissãoDeDocumentosToolStripMenuItem;
     }
 }
 

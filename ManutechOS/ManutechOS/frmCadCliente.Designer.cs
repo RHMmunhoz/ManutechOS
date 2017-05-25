@@ -123,6 +123,7 @@
             // 
             // cboSexo
             // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             "Masculino",
@@ -639,6 +640,7 @@
             // 
             // cboTipo
             // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
             this.cboTipo.Items.AddRange(new object[] {
             "Pessoa Física",
@@ -647,6 +649,7 @@
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(150, 21);
             this.cboTipo.TabIndex = 0;
+            this.cboTipo.TextChanged += new System.EventHandler(this.cboTipo_TextChanged);
             // 
             // btnSalvar
             // 

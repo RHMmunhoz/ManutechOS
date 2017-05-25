@@ -15,5 +15,17 @@ namespace ManutechOS
         private List<Equipamento> equipamentos = new List<Equipamento>();
         private string status, info;
         private DateTime dataAbertura, dataFechamento, dataInicio, dataFim;
+
+        //Propriedades
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+        public string Info
+        {
+            get { return info; }
+            set { info = value; }
+        }
     }
 }

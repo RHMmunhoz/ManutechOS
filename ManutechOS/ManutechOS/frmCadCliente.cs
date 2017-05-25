@@ -26,5 +26,23 @@ namespace ManutechOS
         {
             this.Close();
         }
+
+        private void cboTipo_TextChanged(object sender, EventArgs e)
+        {
+            if(cboTipo.Text == "Pessoa Física")
+            {
+                gboDados.Enabled = true;
+                gboDados.Visible = true;
+                gboDadosEmpresa.Enabled = false;
+                gboDadosEmpresa.Visible = false;
+            }
+            else
+            {
+                gboDados.Enabled = false;
+                gboDados.Visible = false;
+                gboDadosEmpresa.Enabled = true;
+                gboDadosEmpresa.Visible = true;
+            }
+        }
     }
 }

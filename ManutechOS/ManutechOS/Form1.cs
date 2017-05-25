@@ -98,5 +98,20 @@ namespace ManutechOS
                 formTecnico.Show();
             }
         }
+
+        private void miEquipamentos_Click(object sender, EventArgs e)
+        {
+            btnEquipamentos_Click(btnEquipamentos, e);
+        }
+
+        private void miServico_Click(object sender, EventArgs e)
+        {
+            btnServicos_Click(btnServicos, e);
+        }
+
+        private void miClientes_Click(object sender, EventArgs e)
+        {
+            btnClientes_Click(btnClientes, e);
+        }
     }
 }

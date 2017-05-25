@@ -8,6 +8,7 @@ namespace ManutechOS
 {
     public class Cliente
     {
+        private List<Equipamento> equipamentos = new List<Equipamento>();
         //Atributos de Endereco
         private string rua, bairro, cidade, complemento, uf, referencia, cep;
         private int num;

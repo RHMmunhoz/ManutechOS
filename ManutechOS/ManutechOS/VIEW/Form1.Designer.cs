@@ -45,13 +45,14 @@
             this.miEquipamentos = new System.Windows.Forms.ToolStripMenuItem();
             this.novoEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miServico = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miNewServico = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.miUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emissãoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.miNewCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
@@ -241,17 +242,18 @@
             // miServico
             // 
             this.miServico.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoServiçoToolStripMenuItem});
+            this.miNewServico,
+            this.miNewCategoria});
             this.miServico.Name = "miServico";
             this.miServico.Size = new System.Drawing.Size(152, 22);
             this.miServico.Text = "Serviços";
             this.miServico.Click += new System.EventHandler(this.miServico_Click);
             // 
-            // novoServiçoToolStripMenuItem
+            // miNewServico
             // 
-            this.novoServiçoToolStripMenuItem.Name = "novoServiçoToolStripMenuItem";
-            this.novoServiçoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.novoServiçoToolStripMenuItem.Text = "Novo Serviço...";
+            this.miNewServico.Name = "miNewServico";
+            this.miNewServico.Size = new System.Drawing.Size(156, 22);
+            this.miNewServico.Text = "Novo Serviço...";
             // 
             // toolStripSeparator1
             // 
@@ -288,6 +290,13 @@
             this.miSobre.Size = new System.Drawing.Size(49, 20);
             this.miSobre.Text = "Sobre";
             this.miSobre.Click += new System.EventHandler(this.miSobre_Click);
+            // 
+            // miNewCategoria
+            // 
+            this.miNewCategoria.Name = "miNewCategoria";
+            this.miNewCategoria.Size = new System.Drawing.Size(156, 22);
+            this.miNewCategoria.Text = "Nova Categoria";
+            this.miNewCategoria.Click += new System.EventHandler(this.miNewCategoria_Click);
             // 
             // frmPrincipal
             // 
@@ -341,11 +350,12 @@
         private System.Windows.Forms.StatusStrip rodStatus;
         private System.Windows.Forms.ToolStripMenuItem novoClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoEquipamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoServiçoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miNewServico;
         private System.Windows.Forms.ToolStripStatusLabel lblUser;
         private System.Windows.Forms.ToolStripButton btnTecnico;
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emissãoDeDocumentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miNewCategoria;
     }
 }
 

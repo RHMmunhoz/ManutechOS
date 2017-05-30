@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManutechOS.VIEW;
 
 namespace ManutechOS
 {
@@ -112,6 +113,13 @@ namespace ManutechOS
         private void miClientes_Click(object sender, EventArgs e)
         {
             btnClientes_Click(btnClientes, e);
+        }
+
+        private void miNewCategoria_Click(object sender, EventArgs e)
+        {
+            frmCadCatServico formCategoria = new frmCadCatServico();
+            formCategoria.BringToFront();
+            formCategoria.ShowDialog();
         }
     }
 }

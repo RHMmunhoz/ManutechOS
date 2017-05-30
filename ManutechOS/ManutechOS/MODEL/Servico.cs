@@ -9,7 +9,8 @@ namespace ManutechOS
     public class Servico
     {
         //Atributos
-        private string descricao, categoria;
+        private int codigo, categoria;
+        private string descricao;
 
         //Propriedades
         public string Descricao
@@ -17,10 +18,16 @@ namespace ManutechOS
             get { return descricao; }
             set { descricao = value; }
         }
-        public string Categoria
+        public int Categoria
         {
             get { return categoria; }
             set { categoria = value; }
+        }
+
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
         }
     }
 }

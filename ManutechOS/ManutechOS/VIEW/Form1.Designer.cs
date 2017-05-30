@@ -46,13 +46,15 @@
             this.novoEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miServico = new System.Windows.Forms.ToolStripMenuItem();
             this.miNewServico = new System.Windows.Forms.ToolStripMenuItem();
+            this.miNewCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.miUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.miConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emissãoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
-            this.miNewCategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCatServico = new System.Windows.Forms.ToolStripButton();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
@@ -116,10 +118,12 @@
             this.btnEquipamentos,
             this.btnServicos,
             this.btnOS,
-            this.btnTecnico});
+            this.btnTecnico,
+            this.toolStripSeparator2,
+            this.btnCatServico});
             this.mnuLateral.Location = new System.Drawing.Point(0, 3);
             this.mnuLateral.Name = "mnuLateral";
-            this.mnuLateral.Size = new System.Drawing.Size(129, 272);
+            this.mnuLateral.Size = new System.Drawing.Size(129, 351);
             this.mnuLateral.TabIndex = 0;
             // 
             // btnClientes
@@ -214,7 +218,7 @@
             this.miClientes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoClienteToolStripMenuItem});
             this.miClientes.Name = "miClientes";
-            this.miClientes.Size = new System.Drawing.Size(152, 22);
+            this.miClientes.Size = new System.Drawing.Size(150, 22);
             this.miClientes.Text = "Clientes";
             this.miClientes.Click += new System.EventHandler(this.miClientes_Click);
             // 
@@ -229,7 +233,7 @@
             this.miEquipamentos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoEquipamentoToolStripMenuItem});
             this.miEquipamentos.Name = "miEquipamentos";
-            this.miEquipamentos.Size = new System.Drawing.Size(152, 22);
+            this.miEquipamentos.Size = new System.Drawing.Size(150, 22);
             this.miEquipamentos.Text = "Equipamentos";
             this.miEquipamentos.Click += new System.EventHandler(this.miEquipamentos_Click);
             // 
@@ -245,7 +249,7 @@
             this.miNewServico,
             this.miNewCategoria});
             this.miServico.Name = "miServico";
-            this.miServico.Size = new System.Drawing.Size(152, 22);
+            this.miServico.Size = new System.Drawing.Size(150, 22);
             this.miServico.Text = "Serviços";
             this.miServico.Click += new System.EventHandler(this.miServico_Click);
             // 
@@ -255,15 +259,22 @@
             this.miNewServico.Size = new System.Drawing.Size(156, 22);
             this.miNewServico.Text = "Novo Serviço...";
             // 
+            // miNewCategoria
+            // 
+            this.miNewCategoria.Name = "miNewCategoria";
+            this.miNewCategoria.Size = new System.Drawing.Size(156, 22);
+            this.miNewCategoria.Text = "Nova Categoria";
+            this.miNewCategoria.Click += new System.EventHandler(this.miNewCategoria_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(147, 6);
             // 
             // miUsuario
             // 
             this.miUsuario.Name = "miUsuario";
-            this.miUsuario.Size = new System.Drawing.Size(152, 22);
+            this.miUsuario.Size = new System.Drawing.Size(150, 22);
             this.miUsuario.Text = "Usuários";
             // 
             // miConsultas
@@ -291,12 +302,22 @@
             this.miSobre.Text = "Sobre";
             this.miSobre.Click += new System.EventHandler(this.miSobre_Click);
             // 
-            // miNewCategoria
+            // toolStripSeparator2
             // 
-            this.miNewCategoria.Name = "miNewCategoria";
-            this.miNewCategoria.Size = new System.Drawing.Size(156, 22);
-            this.miNewCategoria.Text = "Nova Categoria";
-            this.miNewCategoria.Click += new System.EventHandler(this.miNewCategoria_Click);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(127, 6);
+            // 
+            // btnCatServico
+            // 
+            this.btnCatServico.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCatServico.Image = ((System.Drawing.Image)(resources.GetObject("btnCatServico.Image")));
+            this.btnCatServico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCatServico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCatServico.Name = "btnCatServico";
+            this.btnCatServico.Size = new System.Drawing.Size(127, 51);
+            this.btnCatServico.Text = "Categorias de Serviço";
+            this.btnCatServico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCatServico.Click += new System.EventHandler(this.btnCatServico_Click);
             // 
             // frmPrincipal
             // 
@@ -356,6 +377,8 @@
         private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emissãoDeDocumentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miNewCategoria;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnCatServico;
     }
 }
 

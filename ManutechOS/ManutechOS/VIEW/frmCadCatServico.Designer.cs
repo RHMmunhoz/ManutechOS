@@ -84,6 +84,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -106,7 +107,9 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gboCategoria);
             this.Controls.Add(this.gboCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCadCatServico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inserir Categorias de Serviço";
             this.gboCodigo.ResumeLayout(false);
             this.gboCodigo.PerformLayout();

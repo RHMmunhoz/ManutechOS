@@ -30,7 +30,7 @@ namespace ManutechOS
             return connection;
         }
 
-        public void ExecuteSQL(string qry)
+        public void ExecuteNonSQL(string qry)
         {
             if (connection.State != System.Data.ConnectionState.Open)
                 connection.Open();

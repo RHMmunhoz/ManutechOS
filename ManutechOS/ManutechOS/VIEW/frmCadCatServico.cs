@@ -14,8 +14,19 @@ namespace ManutechOS.VIEW
 {
     public partial class frmCadCatServico : Form
     {
-        public frmCadCatServico()
+        private string op;
+
+        public frmCadCatServico(string opcao, DataGridViewRow linha)
         {
+            op = opcao;
+            InitializeComponent();
+            txtCodigo.Text = linha.Cells[0].Value.ToString();
+            txtCategoria.Text = linha.Cells[1].Value.ToString();
+        }
+
+        public frmCadCatServico(string opcao)
+        {
+            op = opcao;
             InitializeComponent();
         }
 
@@ -40,7 +51,16 @@ namespace ManutechOS.VIEW
         {
             CatServicoDAO catServicoDAO = new CatServicoDAO();
             CatServico c = GetDTO();
-            catServicoDAO.Create(c);
+            if(op  == "novo")
+                catServicoDAO.Create(c);
+            if (op == "editar")
+                catServicoDAO.Update(c);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }

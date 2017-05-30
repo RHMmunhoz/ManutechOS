@@ -68,6 +68,12 @@
     <Compile Include="VIEW\frmCadTecnico.Designer.cs">
       <DependentUpon>frmCadTecnico.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmCatServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmCatServico.Designer.cs">
+      <DependentUpon>frmCatServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmCadTecnico.resx">
       <DependentUpon>frmCadTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmCatServico.resx">
+      <DependentUpon>frmCatServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmOS.resx">
       <DependentUpon>frmOS.cs</DependentUpon>

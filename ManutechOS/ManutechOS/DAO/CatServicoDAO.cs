@@ -88,7 +88,7 @@ namespace ManutechOS.DAO
             MySqlConnection connection = Database.GetInstance().GetConnection();
             string qry;
             if (nome != "")
-                qry = string.Format("SELECT id, categoria WHERE nome LIKE '%{0}%'", nome);
+                qry = string.Format("SELECT id, categoria FROM CatServico WHERE categoria LIKE '%{0}%'", nome);
             else
                 qry = "SELECT id, categoria FROM CatServico";
             if (connection.State != System.Data.ConnectionState.Open)
@@ -104,6 +104,20 @@ namespace ManutechOS.DAO
             }
             connection.Close();
             return lista;
+        }
+
+        //Retorna o último ID utilizado
+        public int Max_ID()
+        {
+            int id;
+            MySqlConnection connection = Database.GetInstance().GetConnection();
+            string qry = string.Format("SELECT MAX(id) FROM CatServico");
+            if (connection.State != System.Data.ConnectionState.Open)
+                connection.Open();
+            MySqlCommand comm = new MySqlCommand(qry, connection);
+            id = Convert.ToInt32(comm.ExecuteScalar());
+            connection.Close();
+            return id;
         }
     }
 }

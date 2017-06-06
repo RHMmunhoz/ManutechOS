@@ -117,9 +117,9 @@ namespace ManutechOS
 
         private void miNewCategoria_Click(object sender, EventArgs e)
         {
-            frmCadCatServico formCategoria = new frmCadCatServico("novo");
-            formCategoria.BringToFront();
-            formCategoria.ShowDialog();
+            //frmCadCatServico formCategoria = new frmCadCatServico("novo");
+            //formCategoria.BringToFront();
+            //formCategoria.ShowDialog();
         }
 
         private void btnCatServico_Click(object sender, EventArgs e)

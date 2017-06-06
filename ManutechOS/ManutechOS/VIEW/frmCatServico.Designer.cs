@@ -37,9 +37,10 @@
             this.gboRegistros = new System.Windows.Forms.GroupBox();
             this.dgvCatServicos = new System.Windows.Forms.DataGridView();
             this.gboFiltro = new System.Windows.Forms.GroupBox();
+            this.rdbCodigo = new System.Windows.Forms.RadioButton();
+            this.rdbCategoria = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.pnBotoes.SuspendLayout();
             this.gboRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatServicos)).BeginInit();
@@ -68,6 +69,7 @@
             this.btnVisualizar.Text = "Visualizar";
             this.btnVisualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // btnExcluir
             // 
@@ -133,15 +135,38 @@
             // 
             // gboFiltro
             // 
+            this.gboFiltro.Controls.Add(this.rdbCodigo);
+            this.gboFiltro.Controls.Add(this.rdbCategoria);
             this.gboFiltro.Controls.Add(this.btnBuscar);
-            this.gboFiltro.Controls.Add(this.txtDescricao);
-            this.gboFiltro.Controls.Add(this.lblDescricao);
+            this.gboFiltro.Controls.Add(this.txtBusca);
             this.gboFiltro.Location = new System.Drawing.Point(9, 11);
             this.gboFiltro.Name = "gboFiltro";
             this.gboFiltro.Size = new System.Drawing.Size(429, 78);
             this.gboFiltro.TabIndex = 9;
             this.gboFiltro.TabStop = false;
             this.gboFiltro.Text = "Filtro";
+            // 
+            // rdbCodigo
+            // 
+            this.rdbCodigo.AutoSize = true;
+            this.rdbCodigo.Location = new System.Drawing.Point(94, 13);
+            this.rdbCodigo.Name = "rdbCodigo";
+            this.rdbCodigo.Size = new System.Drawing.Size(58, 17);
+            this.rdbCodigo.TabIndex = 4;
+            this.rdbCodigo.Text = "Codigo";
+            this.rdbCodigo.UseVisualStyleBackColor = true;
+            // 
+            // rdbCategoria
+            // 
+            this.rdbCategoria.AutoSize = true;
+            this.rdbCategoria.Checked = true;
+            this.rdbCategoria.Location = new System.Drawing.Point(18, 13);
+            this.rdbCategoria.Name = "rdbCategoria";
+            this.rdbCategoria.Size = new System.Drawing.Size(70, 17);
+            this.rdbCategoria.TabIndex = 3;
+            this.rdbCategoria.TabStop = true;
+            this.rdbCategoria.Text = "Categoria";
+            this.rdbCategoria.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -153,22 +178,14 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtDescricao
+            // txtBusca
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(18, 32);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(316, 20);
-            this.txtDescricao.TabIndex = 1;
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(15, 16);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 0;
-            this.lblDescricao.Text = "Descrição";
+            this.txtBusca.Location = new System.Drawing.Point(18, 32);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(316, 20);
+            this.txtBusca.TabIndex = 1;
             // 
             // frmCatServico
             // 
@@ -201,7 +218,8 @@
         private System.Windows.Forms.DataGridView dgvCatServicos;
         private System.Windows.Forms.GroupBox gboFiltro;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.TextBox txtBusca;
+        private System.Windows.Forms.RadioButton rdbCodigo;
+        private System.Windows.Forms.RadioButton rdbCategoria;
     }
 }

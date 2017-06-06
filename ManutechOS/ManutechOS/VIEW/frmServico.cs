@@ -20,13 +20,13 @@ namespace ManutechOS
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmCadServicos formCadServico = new frmCadServicos();
-            formCadServico.TopLevel = false;
+            //formCadServico.TopLevel = false;
             //Adiciona o Form dentro do Container Principal
-            Parent.Controls.Add(formCadServico);
-            formCadServico.Parent = Parent;
+            //Parent.Controls.Add(formCadServico);
+            //formCadServico.Parent = Parent;
             //Coloca o Form a frente dos outros
             formCadServico.BringToFront();
-            formCadServico.Show();
+            formCadServico.ShowDialog();
         }
     }
 }

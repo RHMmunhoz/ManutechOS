@@ -108,9 +108,11 @@
             this.Controls.Add(this.gboCategoria);
             this.Controls.Add(this.gboCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadCatServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inserir Categorias de Serviço";
+            this.Text = "Categorias de Serviço";
             this.gboCodigo.ResumeLayout(false);
             this.gboCodigo.PerformLayout();
             this.gboCategoria.ResumeLayout(false);

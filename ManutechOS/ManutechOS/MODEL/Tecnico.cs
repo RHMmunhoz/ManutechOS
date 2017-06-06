@@ -8,6 +8,7 @@ namespace ManutechOS
 {
     class Tecnico
     {
+        //Dados Pessoais
         private string nome, cpf, rg;
         private char sexo;
         private DateTime dataCad, dataNasc;

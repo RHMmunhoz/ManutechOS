@@ -506,6 +506,8 @@
             this.Controls.Add(this.gboEndereco);
             this.Controls.Add(this.gboDados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadTecnico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Técnicos";

@@ -15,19 +15,34 @@ namespace ManutechOS.VIEW
     public partial class frmCadCatServico : Form
     {
         private string op;
+        private frmCatServico form;
 
-        public frmCadCatServico(string opcao, DataGridViewRow linha)
+        public frmCadCatServico(string opcao, CatServico c, frmCatServico f)
         {
             op = opcao;
+            form = f;
             InitializeComponent();
-            txtCodigo.Text = linha.Cells[0].Value.ToString();
-            txtCategoria.Text = linha.Cells[1].Value.ToString();
+            txtCodigo.Text = c.Codigo.ToString();
+            txtCategoria.Text = c.Categoria;
+            txtCodigo.Enabled = false;
+            if (op == "visualizar")
+            {
+                txtCategoria.Enabled = false;
+                btnSalvar.Enabled = false;
+            }
         }
 
-        public frmCadCatServico(string opcao)
+        public frmCadCatServico(string opcao, frmCatServico f)
         {
             op = opcao;
+            form = f;
             InitializeComponent();
+            if(op == "novo")
+            {
+                CatServicoDAO catServicoDAO = new CatServicoDAO();
+                txtCodigo.Text = (catServicoDAO.Max_ID() + 1).ToString();
+                txtCodigo.Enabled = false;
+            }
         }
 
         //Cria a entidade(DTO) com as informações da visão
@@ -55,12 +70,12 @@ namespace ManutechOS.VIEW
                 catServicoDAO.Create(c);
             if (op == "editar")
                 catServicoDAO.Update(c);
+            form.AtualizarDGV();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-            
         }
     }
 }

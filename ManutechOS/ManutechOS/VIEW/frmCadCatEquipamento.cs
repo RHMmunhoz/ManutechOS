@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ManutechOS.MODEL;
 using ManutechOS.DAO;
+using ManutechOS.MODEL;
 
 namespace ManutechOS.VIEW
 {
-    public partial class frmCadCatServico : Form
+    public partial class frmCadCatEquipamento : Form
     {
         private string op;
-        private frmCatServico form;
+        private frmCatEquipamento form;
 
-        public frmCadCatServico(string opcao, CatServico c, frmCatServico f)
+        public frmCadCatEquipamento(string opcao, CatEquipamento c, frmCatEquipamento f)
         {
             op = opcao;
             form = f;
@@ -32,31 +32,31 @@ namespace ManutechOS.VIEW
             }
         }
 
-        public frmCadCatServico(string opcao, frmCatServico f)
+        public frmCadCatEquipamento(string opcao, frmCatEquipamento f)
         {
             op = opcao;
             form = f;
             InitializeComponent();
-            if(op == "novo")
+            if (op == "novo")
             {
-                CatEquipamentoDAO catServicoDAO = new CatEquipamentoDAO();
-                txtCodigo.Text = (catServicoDAO.Max_ID() + 1).ToString();
+                CatEquipamentoDAO catEquipamentoDAO = new CatEquipamentoDAO();
+                txtCodigo.Text = (catEquipamentoDAO.Max_ID() + 1).ToString();
                 txtCodigo.Enabled = false;
             }
         }
 
         //Cria a entidade(DTO) com as informações da visão
-        private CatServico GetDTO()
+        private CatEquipamento GetDTO()
         {
-            CatServico catServico = new CatServico();
-            catServico.Codigo = int.Parse(txtCodigo.Text);
-            catServico.Categoria = txtCategoria.Text;
+            CatEquipamento catEquipamento = new CatEquipamento();
+            catEquipamento.Codigo = int.Parse(txtCodigo.Text);
+            catEquipamento.Categoria = txtCategoria.Text;
 
-            return catServico;
+            return catEquipamento;
         }
 
         //Coloca as informações do modelo na visão
-        private void SetDTO(CatServico c)
+        private void SetDTO(CatEquipamento c)
         {
             txtCodigo.Text = (c.Codigo).ToString();
             txtCategoria.Text = c.Categoria;
@@ -65,15 +65,15 @@ namespace ManutechOS.VIEW
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Tem certeza que deseja SALVAR as alterações?",
-                "Salvar Alterações", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+                "Salvar Alterações", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                CatServicoDAO catServicoDAO = new CatServicoDAO();
-                CatServico c = GetDTO();
+                CatEquipamentoDAO catEquipamentoDAO = new CatEquipamentoDAO();
+                CatEquipamento c = GetDTO();
                 if (op == "novo")
-                    catServicoDAO.Create(c);
+                    catEquipamentoDAO.Create(c);
                 if (op == "editar")
-                    catServicoDAO.Update(c);
+                    catEquipamentoDAO.Update(c);
                 form.AtualizarDGV();
                 MessageBox.Show("Registro salvo com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
@@ -84,7 +84,7 @@ namespace ManutechOS.VIEW
         {
             DialogResult result = MessageBox.Show("Tem certeza que deseja CANCELAR as alterações?",
                 "Cancelar Alterações", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
                 this.Close();
         }
     }

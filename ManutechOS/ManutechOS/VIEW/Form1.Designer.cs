@@ -38,6 +38,8 @@
             this.btnServicos = new System.Windows.Forms.ToolStripButton();
             this.btnOS = new System.Windows.Forms.ToolStripButton();
             this.btnTecnico = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCatServico = new System.Windows.Forms.ToolStripButton();
             this.mnuPrincipal = new System.Windows.Forms.MenuStrip();
             this.miCadastros = new System.Windows.Forms.ToolStripMenuItem();
             this.miClientes = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +55,7 @@
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emissãoDeDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miSobre = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnCatServico = new System.Windows.Forms.ToolStripButton();
+            this.btnCatEquipamento = new System.Windows.Forms.ToolStripButton();
             this.tscContainer.BottomToolStripPanel.SuspendLayout();
             this.tscContainer.LeftToolStripPanel.SuspendLayout();
             this.tscContainer.TopToolStripPanel.SuspendLayout();
@@ -76,7 +77,7 @@
             this.tscContainer.ContentPanel.BackColor = System.Drawing.SystemColors.Control;
             this.tscContainer.ContentPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tscContainer.ContentPanel.BackgroundImage")));
             this.tscContainer.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tscContainer.ContentPanel.Size = new System.Drawing.Size(524, 381);
+            this.tscContainer.ContentPanel.Size = new System.Drawing.Size(495, 381);
             this.tscContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
             // tscContainer.LeftToolStripPanel
@@ -120,10 +121,11 @@
             this.btnOS,
             this.btnTecnico,
             this.toolStripSeparator2,
-            this.btnCatServico});
+            this.btnCatServico,
+            this.btnCatEquipamento});
             this.mnuLateral.Location = new System.Drawing.Point(0, 3);
             this.mnuLateral.Name = "mnuLateral";
-            this.mnuLateral.Size = new System.Drawing.Size(129, 351);
+            this.mnuLateral.Size = new System.Drawing.Size(158, 378);
             this.mnuLateral.TabIndex = 0;
             // 
             // btnClientes
@@ -133,7 +135,7 @@
             this.btnClientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(127, 51);
+            this.btnClientes.Size = new System.Drawing.Size(156, 51);
             this.btnClientes.Text = "Clientes (F2)";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
@@ -144,7 +146,7 @@
             this.btnEquipamentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnEquipamentos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEquipamentos.Name = "btnEquipamentos";
-            this.btnEquipamentos.Size = new System.Drawing.Size(127, 51);
+            this.btnEquipamentos.Size = new System.Drawing.Size(156, 51);
             this.btnEquipamentos.Text = "Equipamentos (F3)";
             this.btnEquipamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEquipamentos.Click += new System.EventHandler(this.btnEquipamentos_Click);
@@ -156,7 +158,7 @@
             this.btnServicos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnServicos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnServicos.Name = "btnServicos";
-            this.btnServicos.Size = new System.Drawing.Size(127, 51);
+            this.btnServicos.Size = new System.Drawing.Size(156, 51);
             this.btnServicos.Text = "Serviços (F4)";
             this.btnServicos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnServicos.Click += new System.EventHandler(this.btnServicos_Click);
@@ -167,7 +169,7 @@
             this.btnOS.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnOS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnOS.Name = "btnOS";
-            this.btnOS.Size = new System.Drawing.Size(127, 51);
+            this.btnOS.Size = new System.Drawing.Size(156, 51);
             this.btnOS.Text = "Ordem de Serviço (F5)";
             this.btnOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOS.ToolTipText = "O.S (F)";
@@ -180,10 +182,27 @@
             this.btnTecnico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnTecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnTecnico.Name = "btnTecnico";
-            this.btnTecnico.Size = new System.Drawing.Size(127, 51);
+            this.btnTecnico.Size = new System.Drawing.Size(156, 51);
             this.btnTecnico.Text = "Técnico (F6)";
             this.btnTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTecnico.Click += new System.EventHandler(this.btnTecnico_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(156, 6);
+            // 
+            // btnCatServico
+            // 
+            this.btnCatServico.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCatServico.Image = ((System.Drawing.Image)(resources.GetObject("btnCatServico.Image")));
+            this.btnCatServico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCatServico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCatServico.Name = "btnCatServico";
+            this.btnCatServico.Size = new System.Drawing.Size(156, 51);
+            this.btnCatServico.Text = "Categorias de Serviço";
+            this.btnCatServico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCatServico.Click += new System.EventHandler(this.btnCatServico_Click);
             // 
             // mnuPrincipal
             // 
@@ -302,22 +321,17 @@
             this.miSobre.Text = "Sobre";
             this.miSobre.Click += new System.EventHandler(this.miSobre_Click);
             // 
-            // toolStripSeparator2
+            // btnCatEquipamento
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(127, 6);
-            // 
-            // btnCatServico
-            // 
-            this.btnCatServico.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCatServico.Image = ((System.Drawing.Image)(resources.GetObject("btnCatServico.Image")));
-            this.btnCatServico.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnCatServico.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCatServico.Name = "btnCatServico";
-            this.btnCatServico.Size = new System.Drawing.Size(127, 51);
-            this.btnCatServico.Text = "Categorias de Serviço";
-            this.btnCatServico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCatServico.Click += new System.EventHandler(this.btnCatServico_Click);
+            this.btnCatEquipamento.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnCatEquipamento.Image = ((System.Drawing.Image)(resources.GetObject("btnCatEquipamento.Image")));
+            this.btnCatEquipamento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCatEquipamento.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCatEquipamento.Name = "btnCatEquipamento";
+            this.btnCatEquipamento.Size = new System.Drawing.Size(157, 51);
+            this.btnCatEquipamento.Text = "Categorias de Equipamento";
+            this.btnCatEquipamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCatEquipamento.Click += new System.EventHandler(this.btnCatEquipamento_Click);
             // 
             // frmPrincipal
             // 
@@ -379,6 +393,7 @@
         private System.Windows.Forms.ToolStripMenuItem miNewCategoria;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnCatServico;
+        private System.Windows.Forms.ToolStripButton btnCatEquipamento;
     }
 }
 

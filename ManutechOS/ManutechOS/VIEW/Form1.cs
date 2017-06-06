@@ -136,5 +136,21 @@ namespace ManutechOS
                 formCatServico.Show();
             }
         }
+
+        private void btnCatEquipamento_Click(object sender, EventArgs e)
+        {
+            frmCatEquipamento f = (frmCatEquipamento)Application.OpenForms["frmCatEquipamento"];
+            if (f != null)
+                f.BringToFront();
+            else
+            {
+                frmCatEquipamento formCatEquipamento = new frmCatEquipamento();
+                formCatEquipamento.TopLevel = false;
+                tscContainer.ContentPanel.Controls.Add(formCatEquipamento);
+                formCatEquipamento.BringToFront();
+                formCatEquipamento.Show();
+            }
+
+        }
     }
 }

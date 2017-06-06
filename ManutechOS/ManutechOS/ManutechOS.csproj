@@ -46,10 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CatEquipamentoDAO.cs" />
     <Compile Include="DAO\CatServicoDAO.cs" />
     <Compile Include="DAO\ServicoDAO.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="MODEL\CatEquipamento.cs" />
     <Compile Include="MODEL\CatServico.cs" />
+    <Compile Include="VIEW\frmCadCatEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmCadCatEquipamento.Designer.cs">
+      <DependentUpon>frmCadCatEquipamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmCadCatServico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +75,12 @@
     </Compile>
     <Compile Include="VIEW\frmCadTecnico.Designer.cs">
       <DependentUpon>frmCadTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmCatEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmCatEquipamento.Designer.cs">
+      <DependentUpon>frmCatEquipamento.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\frmCatServico.cs">
       <SubType>Form</SubType>
@@ -143,6 +157,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MODEL\Servico.cs" />
     <Compile Include="MODEL\Tecnico.cs" />
+    <EmbeddedResource Include="VIEW\frmCadCatEquipamento.resx">
+      <DependentUpon>frmCadCatEquipamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmCadCatServico.resx">
       <DependentUpon>frmCadCatServico.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmCadTecnico.resx">
       <DependentUpon>frmCadTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmCatEquipamento.resx">
+      <DependentUpon>frmCatEquipamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmCatServico.resx">
       <DependentUpon>frmCatServico.cs</DependentUpon>

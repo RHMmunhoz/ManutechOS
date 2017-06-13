@@ -109,13 +109,15 @@ namespace ManutechOS.DAO
         //Retorna o último ID utilizado
         public int Max_ID()
         {
-            int id;
+            int id = 0;
             MySqlConnection connection = Database.GetInstance().GetConnection();
             string qry = string.Format("SELECT MAX(id) FROM CatServico");
             if (connection.State != System.Data.ConnectionState.Open)
                 connection.Open();
             MySqlCommand comm = new MySqlCommand(qry, connection);
-            id = Convert.ToInt32(comm.ExecuteScalar());
+            var aux = comm.ExecuteScalar();
+            if(aux != DBNull.Value)
+                id = Convert.ToInt32(aux);
             connection.Close();
             return id;
         }

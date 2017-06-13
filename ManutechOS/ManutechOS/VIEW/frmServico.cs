@@ -19,7 +19,7 @@ namespace ManutechOS
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmCadServicos formCadServico = new frmCadServicos();
+            frmCadServicos formCadServico = new frmCadServicos("novo", this);
             //formCadServico.TopLevel = false;
             //Adiciona o Form dentro do Container Principal
             //Parent.Controls.Add(formCadServico);

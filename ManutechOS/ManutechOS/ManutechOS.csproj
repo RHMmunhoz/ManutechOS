@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="DAO\CatEquipamentoDAO.cs" />
     <Compile Include="DAO\CatServicoDAO.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\EquipamentoDAO.cs" />
     <Compile Include="DAO\ServicoDAO.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="MODEL\CatEquipamento.cs" />

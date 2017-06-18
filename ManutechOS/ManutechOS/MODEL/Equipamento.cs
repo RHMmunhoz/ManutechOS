@@ -8,6 +8,7 @@ namespace ManutechOS
 {
     class Equipamento
     {
+        private int codigo;
         //Atributos técnicos
         private string descricao, categoria, fabricante, modelo, numSerie;
         //Atributos proprietário
@@ -17,6 +18,12 @@ namespace ManutechOS
         private string info;
 
         //Propriedades
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
+
         public string Descricao
         {
             get { return descricao; }

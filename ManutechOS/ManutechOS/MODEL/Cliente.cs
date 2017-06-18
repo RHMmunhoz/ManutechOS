@@ -8,6 +8,7 @@ namespace ManutechOS
 {
     public class Cliente
     {
+        private int codigo;
         private List<Equipamento> equipamentos = new List<Equipamento>();
         //Atributos de Endereco
         private string rua, bairro, cidade, complemento, uf, referencia, cep;
@@ -16,6 +17,11 @@ namespace ManutechOS
         private string email, foneRes, foneCom, foneCel, info;
 
         //Propriedades
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
         public string Rua
         {
             get { return rua; }

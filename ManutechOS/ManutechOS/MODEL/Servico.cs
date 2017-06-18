@@ -13,6 +13,12 @@ namespace ManutechOS
         private string descricao, categoria;
 
         //Propriedades
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
+
         public string Descricao
         {
             get { return descricao; }
@@ -22,12 +28,6 @@ namespace ManutechOS
         {
             get { return categoria; }
             set { categoria = value; }
-        }
-
-        public int Codigo
-        {
-            get { return codigo; }
-            set { codigo = value; }
         }
     }
 }

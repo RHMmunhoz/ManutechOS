@@ -38,8 +38,9 @@
             this.dgvEquipamentos = new System.Windows.Forms.DataGridView();
             this.gboFiltro = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtBusca = new System.Windows.Forms.TextBox();
+            this.rdbCodigo = new System.Windows.Forms.RadioButton();
+            this.rdbEquipamento = new System.Windows.Forms.RadioButton();
             this.pnBotoes.SuspendLayout();
             this.gboRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipamentos)).BeginInit();
@@ -120,6 +121,7 @@
             // 
             this.dgvEquipamentos.AllowUserToAddRows = false;
             this.dgvEquipamentos.AllowUserToDeleteRows = false;
+            this.dgvEquipamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEquipamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquipamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEquipamentos.Location = new System.Drawing.Point(3, 16);
@@ -130,9 +132,10 @@
             // 
             // gboFiltro
             // 
+            this.gboFiltro.Controls.Add(this.rdbCodigo);
+            this.gboFiltro.Controls.Add(this.rdbEquipamento);
             this.gboFiltro.Controls.Add(this.btnBuscar);
-            this.gboFiltro.Controls.Add(this.txtDescricao);
-            this.gboFiltro.Controls.Add(this.lblDescricao);
+            this.gboFiltro.Controls.Add(this.txtBusca);
             this.gboFiltro.Location = new System.Drawing.Point(8, 6);
             this.gboFiltro.Name = "gboFiltro";
             this.gboFiltro.Size = new System.Drawing.Size(613, 78);
@@ -151,21 +154,34 @@
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // txtDescricao
+            // txtBusca
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(18, 32);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(499, 20);
-            this.txtDescricao.TabIndex = 1;
+            this.txtBusca.Location = new System.Drawing.Point(18, 32);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(499, 20);
+            this.txtBusca.TabIndex = 1;
             // 
-            // lblDescricao
+            // rdbCodigo
             // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(15, 16);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 0;
-            this.lblDescricao.Text = "Descrição";
+            this.rdbCodigo.AutoSize = true;
+            this.rdbCodigo.Location = new System.Drawing.Point(105, 15);
+            this.rdbCodigo.Name = "rdbCodigo";
+            this.rdbCodigo.Size = new System.Drawing.Size(58, 17);
+            this.rdbCodigo.TabIndex = 8;
+            this.rdbCodigo.Text = "Codigo";
+            this.rdbCodigo.UseVisualStyleBackColor = true;
+            // 
+            // rdbEquipamento
+            // 
+            this.rdbEquipamento.AutoSize = true;
+            this.rdbEquipamento.Checked = true;
+            this.rdbEquipamento.Location = new System.Drawing.Point(17, 15);
+            this.rdbEquipamento.Name = "rdbEquipamento";
+            this.rdbEquipamento.Size = new System.Drawing.Size(87, 17);
+            this.rdbEquipamento.TabIndex = 7;
+            this.rdbEquipamento.TabStop = true;
+            this.rdbEquipamento.Text = "Equipamento";
+            this.rdbEquipamento.UseVisualStyleBackColor = true;
             // 
             // frmEquipamento
             // 
@@ -199,7 +215,8 @@
         private System.Windows.Forms.DataGridView dgvEquipamentos;
         private System.Windows.Forms.GroupBox gboFiltro;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.TextBox txtBusca;
+        private System.Windows.Forms.RadioButton rdbCodigo;
+        private System.Windows.Forms.RadioButton rdbEquipamento;
     }
 }

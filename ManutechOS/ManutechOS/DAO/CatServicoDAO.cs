@@ -121,5 +121,42 @@ namespace ManutechOS.DAO
             connection.Close();
             return id;
         }
+
+        //Retorna o ID de uma categoria
+        public int Get_ID(string descricao)
+        {
+            int id = 0;
+            MySqlConnection connection = Database.GetInstance().GetConnection();
+
+            string qry = string.Format("SELECT id FROM CatServico WHERE categoria LIKE '{0}'", descricao);
+
+            if (connection.State != System.Data.ConnectionState.Open)
+                connection.Open();
+
+            MySqlCommand comm = new MySqlCommand(qry, connection);
+            MySqlDataReader dr = comm.ExecuteReader();
+            if (dr.Read())
+                id = dr.GetInt32("id");
+            connection.Close();
+            return id;
+        }
+        //Retorna a Descricao de uma categoria
+        public string Get_ID(int id)
+        {
+            string categoria = null;
+            MySqlConnection connection = Database.GetInstance().GetConnection();
+
+            string qry = "SELECT categoria FROM CatServico WHERE id = " + id;
+
+            if (connection.State != System.Data.ConnectionState.Open)
+                connection.Open();
+
+            MySqlCommand comm = new MySqlCommand(qry, connection);
+            MySqlDataReader dr = comm.ExecuteReader();
+            if (dr.Read())
+                categoria = dr.GetString("categoria");
+            connection.Close();
+            return categoria;
+        }
     }
 }

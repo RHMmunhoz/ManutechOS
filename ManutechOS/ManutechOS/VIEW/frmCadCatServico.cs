@@ -39,7 +39,7 @@ namespace ManutechOS.VIEW
             InitializeComponent();
             if(op == "novo")
             {
-                CatEquipamentoDAO catServicoDAO = new CatEquipamentoDAO();
+                CatServicoDAO catServicoDAO = new CatServicoDAO();
                 txtCodigo.Text = (catServicoDAO.Max_ID() + 1).ToString();
                 txtCodigo.Enabled = false;
             }
